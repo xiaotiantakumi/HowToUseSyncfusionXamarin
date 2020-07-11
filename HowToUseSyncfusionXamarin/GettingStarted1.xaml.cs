@@ -15,9 +15,5 @@ namespace HowToUseSyncfusionXamarin
         {
             InitializeComponent();
         }
-
-        protected override async void OnAppearing()
-        {
-        }
     }
 }
