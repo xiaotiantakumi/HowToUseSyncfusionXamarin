@@ -3,25 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:HowToUseSyncfusionXamarin"
              xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
-			x:Class="HowToUseSyncfusionXamarin.Sample1">
-    <chart:SfChart x:Name="chart">
+			x:Class="HowToUseSyncfusionXamarin.GettingStarted1">
+    <chart:SfChart>
         <chart:SfChart.PrimaryAxis>
             <chart:CategoryAxis>
-                <chart:CategoryAxis.Title>
-                    <chart:ChartAxisTitle Text="Name"></chart:ChartAxisTitle>
-                </chart:CategoryAxis.Title>
             </chart:CategoryAxis>
         </chart:SfChart.PrimaryAxis>
         <chart:SfChart.SecondaryAxis>
             <chart:NumericalAxis>
-                <chart:NumericalAxis.Title>
-                    <chart:ChartAxisTitle Text="Height (in cm)"></chart:ChartAxisTitle>
-                </chart:NumericalAxis.Title>
             </chart:NumericalAxis>
         </chart:SfChart.SecondaryAxis>
-        <chart:SfChart.Series>
-            <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="Name" YBindingPath="Height">
-            </chart:ColumnSeries>
-        </chart:SfChart.Series>
     </chart:SfChart>
 </ContentPage>

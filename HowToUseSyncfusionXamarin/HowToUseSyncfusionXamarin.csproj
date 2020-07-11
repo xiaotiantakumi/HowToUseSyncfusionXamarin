@@ -20,8 +20,8 @@
     <Compile Update="PieSample1.xaml.cs">
       <DependentUpon>PieSample1.xaml</DependentUpon>
     </Compile>
-    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Sample1.xaml.cs">
-      <DependentUpon>Sample1.xaml</DependentUpon>
+    <Compile Update="GettingStarted1.xaml.cs">
+      <DependentUpon>GettingStarted1.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

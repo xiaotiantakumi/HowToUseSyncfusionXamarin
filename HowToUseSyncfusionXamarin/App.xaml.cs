@@ -13,8 +13,7 @@ namespace HowToUseSyncfusionXamarin
         {
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("");
             InitializeComponent();
-
-            MainPage = new HowToUseSyncfusionXamarin.PieSample2();
+            MainPage = new HowToUseSyncfusionXamarin.GettingStarted1();
         }
 
         protected override void OnStart()
