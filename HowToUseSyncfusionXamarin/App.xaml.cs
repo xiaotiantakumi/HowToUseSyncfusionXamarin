@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using HowToUseSyncfusionXamarin.GettingStarted;
 using Xamarin.Forms;
 
 namespace HowToUseSyncfusionXamarin
@@ -13,7 +13,7 @@ namespace HowToUseSyncfusionXamarin
         {
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("");
             InitializeComponent();
-            MainPage = new HowToUseSyncfusionXamarin.GettingStarted1();
+            MainPage = new GettingStarted2();
         }
 
         protected override void OnStart()
