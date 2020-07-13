@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HowToUseSyncfusionXamarin"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+			x:Class="HowToUseSyncfusionXamarin.GettingStarted.GettingStarted3">
+    <chart:SfChart>
+        <chart:SfChart.PrimaryAxis>
+            <chart:CategoryAxis>
+                <chart:CategoryAxis.Title>
+                    <chart:ChartAxisTitle Text="Name"></chart:ChartAxisTitle>
+                </chart:CategoryAxis.Title>
+            </chart:CategoryAxis>
+        </chart:SfChart.PrimaryAxis>
+        <chart:SfChart.SecondaryAxis>
+            <chart:NumericalAxis>
+                <chart:NumericalAxis.Title>
+                    <chart:ChartAxisTitle Text="Height (in cm)"></chart:ChartAxisTitle>
+                </chart:NumericalAxis.Title>
+            </chart:NumericalAxis>
+        </chart:SfChart.SecondaryAxis>
+        <chart:SfChart.Series>
+            <!--凡例に使うLabel="Heights"を追加-->
+            <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="Name" YBindingPath="Height" Label="Heights" EnableTooltip ="True">
+                <!--DataMarkerを使ってグラフのデータラベルとしてY軸の値を表示させる-->
+                <chart:ColumnSeries.DataMarker>
+                    <chart:ChartDataMarker/>
+                </chart:ColumnSeries.DataMarker>
+            </chart:ColumnSeries>
+        </chart:SfChart.Series>
+        <!--タイトルの追加-->
+        <chart:SfChart.Title>
+            <chart:ChartTitle Text="GettingStarted3"/>
+        </chart:SfChart.Title>
+        <!--凡例を表示-->
+        <chart:SfChart.Legend>
+            <chart:ChartLegend/>
+        </chart:SfChart.Legend>
+    </chart:SfChart>
+</ContentPage>
