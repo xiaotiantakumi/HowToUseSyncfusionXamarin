@@ -20,10 +20,10 @@
     <Compile Update="GettingStarted\GettingStarted2.xaml.cs">
       <DependentUpon>GettingStarted2.xaml</DependentUpon>
     </Compile>
-    <Compile Update="PieSample2.xaml.cs">
+    <Compile Update="PieChart\PieSample2.xaml.cs">
       <DependentUpon>PieSample2.xaml</DependentUpon>
     </Compile>
-    <Compile Update="PieSample1.xaml.cs">
+    <Compile Update="PieChart\PieSample1.xaml.cs">
       <DependentUpon>PieSample1.xaml</DependentUpon>
     </Compile>
     <Compile Update="GettingStarted\GettingStarted1.xaml.cs">

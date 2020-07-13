@@ -12,17 +12,17 @@ namespace HowToUseSyncfusionXamarin
 
     public class PieSample2ViewModel
     {
-        public ObservableCollection<Model> Data { get; set; }
+        public ObservableCollection<PieChartModel> Data { get; set; }
 
         public PieSample2ViewModel()
         {
-            Data = new ObservableCollection<Model>()
+            Data = new ObservableCollection<PieChartModel>()
             {
-                new Model("Jan", 50),
-                new Model("Feb", 70),
-                new Model("Mar", 1),
-                new Model("Apr", 57),
-                new Model("May", 48),
+                new PieChartModel("Jan", 50),
+                new PieChartModel("Feb", 70),
+                new PieChartModel("Mar", 1),
+                new PieChartModel("Apr", 57),
+                new PieChartModel("May", 48),
             };
         }
     }
