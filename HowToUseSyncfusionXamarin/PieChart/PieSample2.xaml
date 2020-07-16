@@ -9,7 +9,12 @@
             <chart:ChartLegend/>
         </chart:SfChart.Legend>
         <chart:SfChart.Series>
-            <chart:PieSeries ItemsSource="{Binding Data}" XBindingPath="Month" YBindingPath="Target" EnableSmartLabels="True" EnableTooltip="True" DataMarkerPosition="OutsideExtended">
+            <chart:PieSeries ItemsSource="{Binding Data}"
+                             XBindingPath="Month" YBindingPath="Target" 
+                             EnableTooltip="True" 
+                             DataMarkerPosition="OutsideExtended" 
+                             >
+                <!--ツールチップで表示する内容をカスタマイズ-->
                 <chart:PieSeries.TooltipTemplate>
                     <DataTemplate>
                         <StackLayout Orientation="Vertical">
@@ -24,6 +29,7 @@
                         </StackLayout>
                     </DataTemplate>
                 </chart:PieSeries.TooltipTemplate>
+                <!--凡例を表示する-->
                 <chart:PieSeries.DataMarker>
                     <chart:ChartDataMarker LabelContent="YValue" />
                 </chart:PieSeries.DataMarker>

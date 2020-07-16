@@ -1,3 +1,5 @@
+using System.Drawing;
+
 namespace HowToUseSyncfusionXamarin
 {
     public class PieChartModel
@@ -5,6 +7,7 @@ namespace HowToUseSyncfusionXamarin
         public string Month { get; set; }
 
         public double Target { get; set; }
+        
 
         public PieChartModel(string xValue, double yValue)
         {
