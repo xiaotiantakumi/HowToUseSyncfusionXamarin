@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:chipgroup="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+xmlns:colorPicker="clr-namespace:HowToUseSyncfusionXamarin.ColorPicker;assembly=HowToUseSyncfusionXamarin"
+xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+mc:Ignorable="d"
+             x:Class="HowToUseSyncfusionXamarin.ColorPicker.ChipsAsColorPicker">
+    <ContentPage.Resources>
+        <colorPicker:ColorToChipConverter x:Key="ColorsToChips"/>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="170"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <border:SfBorder HeightRequest="150"
+                             WidthRequest="150"
+                             BackgroundColor="{Binding SelectedColor}"
+                             CornerRadius="75"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             Grid.Row="0" />
+            <ScrollView Grid.Row="1">
+            <chipgroup:SfChipGroup  Type="Choice"
+                                ChipBorderWidth="1"
+                                SelectedItem="{Binding SelectedItem,Mode=TwoWay}"
+                                ItemsSource="{Binding Colors, Converter={StaticResource ColorsToChips}}">
+                <chipgroup:SfChipGroup.ChipLayout>
+                    <FlexLayout HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            Direction="Row"
+                            Wrap="Wrap"
+                            BackgroundColor="{Binding SelectedColor, Mode=TwoWay}"
+                            JustifyContent="Start"
+                            AlignContent="Start"
+                            AlignItems="Start" />
+                </chipgroup:SfChipGroup.ChipLayout>
+            </chipgroup:SfChipGroup>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using HowToUseSyncfusionXamarin.ColorPicker;
 using HowToUseSyncfusionXamarin.GettingStarted;
 using Xamarin.Forms;
 
@@ -13,7 +14,7 @@ namespace HowToUseSyncfusionXamarin
         {
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("");
             InitializeComponent();
-            MainPage = new PieSample2();
+            MainPage = new ChipsAsColorPicker();
         }
 
         protected override void OnStart()

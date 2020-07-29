@@ -5,6 +5,7 @@
   </PropertyGroup>
 
 <ItemGroup>
+<PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.1.0.52" />
 <PackageReference Include="Xamarin.Forms" Version="4.7.0.1080" />
 <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="18.1.0.52" />
 
@@ -29,5 +30,11 @@
     <Compile Update="GettingStarted\GettingStarted1.xaml.cs">
       <DependentUpon>GettingStarted1.xaml</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="ColorPicker\ChipsAsColorPicker.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

@@ -119,6 +119,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Syncfusion.Xamarin.Buttons">
+      <Version>18.1.0.52</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.7.0.1080" />
     <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="18.1.0.52" />
   </ItemGroup>
