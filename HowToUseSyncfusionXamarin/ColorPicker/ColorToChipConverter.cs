@@ -6,6 +6,10 @@ using Xamarin.Forms;
 
 namespace HowToUseSyncfusionXamarin.ColorPicker
 {
+    /// <summary>
+    /// ColorからChipへコンバートするためのクラス
+    /// IValueConverterを継承することでXAML側のConverterで指定できるようになる。
+    /// </summary>
     public class ColorToChipConverter : IValueConverter
     {
         #region Member
@@ -15,6 +19,14 @@ namespace HowToUseSyncfusionXamarin.ColorPicker
         #endregion
 
         #region Convert
+        /// <summary>
+        /// XAML側で紐づけを行っている。ColorsからColorを取り出し、SfChip用にデータを加工している。
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="targetType"></param>
+        /// <param name="parameter"></param>
+        /// <param name="culture"></param>
+        /// <returns></returns>
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             ObservableCollection<SfChip> colorChips = new ObservableCollection<SfChip>();
@@ -36,7 +48,11 @@ namespace HowToUseSyncfusionXamarin.ColorPicker
         #endregion
 
         #region Event
-
+        /// <summary>
+        /// パレットからの色を指定したタイミングで発動するクリックイベント
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ColorChip_Clicked(object sender, EventArgs e)
         {
             if (selectedChip != null)
@@ -56,7 +72,14 @@ namespace HowToUseSyncfusionXamarin.ColorPicker
         #endregion
 
         #region Convert Back
-
+        /// <summary>
+        /// 今回は使用しないため未実装状態にしておく
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="targetType"></param>
+        /// <param name="parameter"></param>
+        /// <param name="culture"></param>
+        /// <returns></returns>
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             throw new NotImplementedException();
